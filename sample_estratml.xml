@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StrategicPlan xmlns="http://www.stratml.net/StratML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.stratml.net/StratML http://stratml.net/StratML/Part1/StratML-Part1.xsd">
+  <Identifier>urn:uuid:11111111-2222-3333-4444-555555555555</Identifier>
+  <Name>Sample Sports & Recreation Center Strategic Plan</Name>
+  <Description>A minimal example illustrating eStratML Part 1 elements.</Description>
+  <Organization>
+    <Identifier>urn:org:sample.sports.center</Identifier>
+    <Name>Sample Sports & Recreation Center</Name>
+    <Email>info@sportscenter.example</Email>
+    <WebAddress>https://www.sportscenter.example</WebAddress>
+  </Organization>
+
+  <Mission>Provide accessible, high-quality sports and recreation programs for our community.</Mission>
+  <Vision>Be the region’s most inclusive hub for health, fitness, and community wellness.</Vision>
+
+  <Values>
+    <Value>Inclusivity</Value>
+    <Value>Safety</Value>
+    <Value>Excellence</Value>
+    <Value>Community</Value>
+  </Values>
+
+  <Goals>
+    <Goal>
+      <Identifier>G1</Identifier>
+      <Name>Increase Community Participation</Name>
+      <Description>Grow membership and program engagement across all age groups.</Description>
+      <Objectives>
+        <Objective>
+          <Identifier>G1-O1</Identifier>
+          <Name>Boost Membership</Name>
+          <Description>Increase active memberships by 20% within 12 months.</Description>
+          <PerformanceIndicators>
+            <PerformanceIndicator>
+              <Identifier>PI-001</Identifier>
+              <Name>Active Membership Count</Name>
+              <UnitOfMeasure>Members</UnitOfMeasure>
+              <Baseline>
+                <Period>2024</Period>
+                <Value>1500</Value>
+              </Baseline>
+              <Target>
+                <Period>2025</Period>
+                <Value>1800</Value>
+              </Target>
+              <Actuals>
+                <Actual>
+                  <Period>2025-Q2</Period>
+                  <Value>1650</Value>
+                </Actual>
+              </Actuals>
+            </PerformanceIndicator>
+          </PerformanceIndicators>
+          <Stakeholders>
+            <Stakeholder>
+              <Identifier>STK-01</Identifier>
+              <Name>Local Residents</Name>
+              <Role>Beneficiary</Role>
+            </Stakeholder>
+            <Stakeholder>
+              <Identifier>STK-02</Identifier>
+              <Name>City Council</Name>
+              <Role>Funder</Role>
+            </Stakeholder>
+          </Stakeholders>
+        </Objective>
+
+        <Objective>
+          <Identifier>G1-O2</Identifier>
+          <Name>Enhance Program Attendance</Name>
+          <Description>Raise average class attendance by 15% year-over-year.</Description>
+          <PerformanceIndicators>
+            <PerformanceIndicator>
+              <Identifier>PI-002</Identifier>
+              <Name>Average Class Attendance</Name>
+              <UnitOfMeasure>Participants per class</UnitOfMeasure>
+              <Baseline>
+                <Period>2024</Period>
+                <Value>18</Value>
+              </Baseline>
+              <Target>
+                <Period>2025</Period>
+                <Value>21</Value>
+              </Target>
+            </PerformanceIndicator>
+          </PerformanceIndicators>
+        </Objective>
+      </Objectives>
+    </Goal>
+
+    <Goal>
+      <Identifier>G2</Identifier>
+      <Name>Improve Facility Quality</Name>
+      <Description>Upgrade key equipment and spaces to increase safety and satisfaction.</Description>
+      <Objectives>
+        <Objective>
+          <Identifier>G2-O1</Identifier>
+          <Name>Safety Upgrades</Name>
+          <Description>Complete safety audits and remediate top 10 risks by Q4 2025.</Description>
+          <PerformanceIndicators>
+            <PerformanceIndicator>
+              <Identifier>PI-003</Identifier>
+              <Name>Risk Items Resolved</Name>
+              <UnitOfMeasure>Items</UnitOfMeasure>
+              <Target>
+                <Period>2025-Q4</Period>
+                <Value>10</Value>
+              </Target>
+            </PerformanceIndicator>
+          </PerformanceIndicators>
+        </Objective>
+      </Objectives>
+    </Goal>
+  </Goals>
+
+  <Contacts>
+    <Contact>
+      <Name>Afaq Ahmad</Name>
+      <Email>afaq@sportscenter.example</Email>
+      <Role>Plan Owner</Role>
+    </Contact>
+  </Contacts>
+
+  <Keywords>
+    <Keyword>sports</Keyword>
+    <Keyword>recreation</Keyword>
+    <Keyword>community</Keyword>
+    <Keyword>health</Keyword>
+  </Keywords>
+
+  <Dates>
+    <Created>2025-08-20</Created>
+    <LastModified>2025-08-20</LastModified>
+    <Effective>2025-09-01</Effective>
+    <Expires>2026-08-31</Expires>
+  </Dates>
+</StrategicPlan>

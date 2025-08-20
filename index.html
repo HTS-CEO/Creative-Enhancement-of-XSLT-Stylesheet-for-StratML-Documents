@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StratML Advanced Document Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>🎯 StratML Advanced Viewer</h1>
+            <p>Comprehensive Strategic Plan Analysis & Performance Visualization</p>
+        </div>
+
+        <div class="upload-section">
+            <h3>📁 Upload StratML Document</h3>
+            <p>Select your StratML XML file to unlock advanced analytics and interactive visualizations</p>
+            <input type="file" id="fileInput" class="file-input" accept=".xml,.stratml" multiple>
+            <label for="fileInput" class="file-label">📤 Choose StratML Files</label>
+            <div id="fileList" style="margin-top: 15px; font-size: 0.9rem; color: #6c757d;"></div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+            <button class="control-btn chart-toggle" onclick="toggleCharts()">📊 Toggle Charts</button>
+            <button class="control-btn export-btn" onclick="exportData()">📊 Export Data</button>
+            <button class="control-btn analytics-btn" onclick="showAnalytics()">📈 Analytics</button>
+            <button class="control-btn" onclick="generateReport()">📄 Generate Report</button>
+            <button class="control-btn" onclick="compareDocuments()">⚖️ Compare</button>
+            <div class="search-container">
+                <input type="text" class="search-box" id="searchBox"
+                    placeholder="Search document content, metrics, stakeholders...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+
+        <div id="documentViewer" class="document-viewer hidden">
+            <div id="tableOfContents" class="toc">
+                <h2>📋 Navigation</h2>
+                <ul id="tocList"></ul>
+            </div>
+
+            <div id="documentContent" class="content">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Processing StratML document with advanced analytics...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="analyticsModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">📊 Advanced Analytics Dashboard</h2>
+                    <button class="close" onclick="closeModal('analyticsModal')">&times;</button>
+                </div>
+                <div id="analyticsContent">
+                    <div class="analytics-grid">
+                        <div class="analytics-card">
+                            <div class="analytics-number" id="totalGoals">0</div>
+                            <div class="analytics-label">Goals</div>
+                        </div>
+                        <div class="analytics-card">
+                            <div class="analytics-number" id="totalObjectives">0</div>
+                            <div class="analytics-label">Objectives</div>
+                        </div>
+                        <div class="analytics-card">
+                            <div class="analytics-number" id="totalIndicators">0</div>
+                            <div class="analytics-label">Indicators</div>
+                        </div>
+                        <div class="analytics-card">
+                            <div class="analytics-number" id="avgPerformance">0%</div>
+                            <div class="analytics-label">Avg Performance</div>
+                        </div>
+                        <div class="analytics-card">
+                            <div class="analytics-number" id="onTrackCount">0</div>
+                            <div class="analytics-label">On Track</div>
+                        </div>
+                        <div class="analytics-card">
+                            <div class="analytics-number" id="riskCount">0</div>
+                            <div class="analytics-label">At Risk</div>
+                        </div>
+                    </div>
+                    <div class="chart-container" style="margin-top: 30px;">
+                        <canvas id="analyticsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="compareModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">⚖️ Document Comparison</h2>
+                    <button class="close" onclick="closeModal('compareModal')">&times;</button>
+                </div>
+                <div id="compareContent">
+                    <p>Upload multiple StratML documents to enable comparison features.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
